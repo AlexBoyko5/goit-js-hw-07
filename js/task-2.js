@@ -29,7 +29,7 @@ const images = [
   },
 ];
 
-
+const tempContainer = document.createDocumentFragment();
 images.forEach(imageData => {
   const listItem = document.createElement('li');
   const imageElement = document.createElement('img');
@@ -38,21 +38,7 @@ images.forEach(imageData => {
   imageElement.classList.add('gallery-image')
   listItem.appendChild(imageElement);
   gallery.appendChild(listItem);
-});
-
-gallery.style.listStyle = 'none';
-gallery.style.display = 'flex';
-gallery.style.justifyContent = 'center';
-gallery.style.alignItems = 'center';
-gallery.style.flexWrap = 'wrap';
-gallery.style.gap = '48px 24px';
-
-const galleryImages = document.querySelectorAll('.gallery-image');
-galleryImages.forEach(image => {
-  image.style.width = '300px';
-  image.style.height = '200px';
-  image.style.border = '2px solid black';
-  image.style.borderRadius = '10px';
+  gallery.appendChild(tempContainer);
 });
 
 
