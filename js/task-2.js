@@ -35,10 +35,9 @@ images.forEach(imageData => {
   const imageElement = document.createElement('img');
   imageElement.src = imageData.url;
   imageElement.alt = imageData.alt;
-  imageElement.classList.add('gallery-image')
+  imageElement.classList.add('gallery-image');
   listItem.appendChild(imageElement);
-  gallery.appendChild(listItem);
-  gallery.appendChild(tempContainer);
+  tempContainer.appendChild(listItem);
 });
-
+gallery.appendChild(tempContainer);
 
